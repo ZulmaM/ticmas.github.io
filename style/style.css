@@ -94,7 +94,9 @@ nav{
     cursor: pointer;
     transition: .4s;
 }
-
+.nav-button-btn{
+    display: none;
+}
 .btn:hover{
     background: #50a890;
     color: #1b1414;
@@ -615,5 +617,8 @@ footer{
     }
     .input-field{
         width: 100%;
+    }
+    .nav-button-btn{
+        display: flex;
     }
 }

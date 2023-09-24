@@ -1,40 +1,38 @@
 /* ----- FUNCTION  NAV-BAR----- */
-function myMenuFunction(){
-  let menuBtn = document.getElementById("myNavMenu");
+function myMenuFunction() {
+  let menuBtn = document.getElementById("menuBtn");
+  let navMenu = document.getElementById("header");
 
-  if(menuBtn.className === "nav-menu"){
-    menuBtn.className += " responsive";
+  if (navMenu.className === "nav-menu") {
+      navMenu.className += " responsive";
   } else {
-    menuBtn.className = "nav-menu";
+      navMenu.className = "nav-menu";
   }
 }
 
 /* ----- AGREGAMOS SOMBRA EN LA BARRA DE NAVEGACIÓN MIENTRAS SE DESPLAZA ----- */
-window.onscroll = function() {headerShadow()};
+window.onscroll = function () {
+  headerShadow();
+};
 
 function headerShadow() {
-  const navHeader =document.getElementById("header");
+  const navHeader = document.getElementById("header");
 
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop >  50) {
-
-    navHeader.style.boxShadow = "0 1px 6px rgba(0, 0, 0, 0.1)";
-    navHeader.style.height = "70px";
-    navHeader.style.lineHeight = "70px";
-
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+      navHeader.style.boxShadow = "0 1px 6px rgba(0, 0, 0, 0.1)";
+      navHeader.style.height = "70px";
+      navHeader.style.lineHeight = "70px";
   } else {
-
-    navHeader.style.boxShadow = "none";
-    navHeader.style.height = "90px";
-    navHeader.style.lineHeight = "90px";
-
+      navHeader.style.boxShadow = "none";
+      navHeader.style.height = "90px";
+      navHeader.style.lineHeight = "90px";
   }
 }
 
-
 const words = ["Desarrolladora Front-End Junior"];
-const typingSpeed = 50; // Velocidad de escritura en milisegundos
-const eraseSpeed = 50;   // Velocidad de borrado en milisegundos
-const pauseTime = 1000;  // Tiempo de pausa entre escritura y borrado en milisegundos
+const typingSpeed = 50; 
+const eraseSpeed = 50;  
+const pauseTime = 1000;  
 
 const typedText = document.getElementById("typedText");
 let wordIndex = 0;
