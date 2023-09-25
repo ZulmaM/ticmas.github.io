@@ -1,12 +1,10 @@
-/* ----- FUNCTION  NAV-BAR----- */
-function myMenuFunction() {
-  let menuBtn = document.getElementById("menuBtn");
-  let navMenu = document.getElementById("header");
+function toggleMenu() {
+  let navMenu = document.getElementById("myNavMenu");
 
-  if (navMenu.className === "nav-menu") {
-      navMenu.className += " responsive";
+  if (navMenu.classList.contains("responsive")) {
+      navMenu.classList.remove("responsive");
   } else {
-      navMenu.className = "nav-menu";
+      navMenu.classList.add("responsive");
   }
 }
 
